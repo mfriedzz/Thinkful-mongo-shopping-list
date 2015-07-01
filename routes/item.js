@@ -20,7 +20,7 @@ router.post('/items', function(req, res) {
 
 router.put('/items/:id', function(req, res) {
     Item.update(req.params.id, req.body.name, function(item) {
-        res.status(201).json(item);
+        res.status(200).json(item);
     }, function(err) {
         res.status(400).json(err);
     });
@@ -28,7 +28,7 @@ router.put('/items/:id', function(req, res) {
 
 router.delete('/items/:id', function(req, res) {
     Item.delete(req.params.id, function() {
-        res.status(201).json({"message": "Item Deleted"});
+        res.status(200).json({"message": "Item Deleted"});
     }, function(err) {
         res.status(400).json(err);
     });

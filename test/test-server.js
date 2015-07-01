@@ -90,9 +90,9 @@ describe('Shopping List', function() {
         res.should.have.status(200);
         res.should.be.json;
         res.body.should.be.a('object');
-        res.body.should.have.property('name');
-        res.body.name.should.be.a('string');
-        res.body.name.should.equal(itemName);
+        res.body.should.have.property('message');
+        res.body.message.should.be.a('string');
+        res.body.message.should.equal('Item Deleted');
         done();
       });
     });
